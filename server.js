@@ -13,7 +13,7 @@ const port = process.env.PORT || 3000;
 // };
 
 const corsOptions = {
-  origin: 'https://frontend-adon.onrender.com', // Cambia a tu URL de Render
+  origin: 'https://frontend-07w5.onrender.com', // Cambia a tu URL de Render
   optionsSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
