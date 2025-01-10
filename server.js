@@ -7,15 +7,15 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Middleware
-// const corsOptions = {
-//   origin: 'https://frontend-l22d.onrender.com', // Cambia a tu URL de Render
-//   optionsSuccessStatus: 200,
-// };
-
 const corsOptions = {
-  origin: 'https://frontend-098z.onrender.com', // Cambia a tu URL de Render
-  optionsSuccessStatus: 200,
+	origin: 'https://comisiones-freyes.com', // Cambia a tu URL de Render/  
+	optionsSuccessStatus: 200,
 };
+
+//const corsOptions = {
+//  origin: 'https://frontend-098z.onrender.com', // Cambia a tu URL de Render
+//  optionsSuccessStatus: 200,
+//};
 app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.static('public'));
@@ -37,19 +37,19 @@ const GraficoRamoSBS = require('./Routes/RouterGraficoRamoSBSPrimaComisiones');
 const GraficoRamoSBSDolares = require('./Routes/RouterGraficoRamoSBSPrimaComisionesDolares');
 
 
-app.use('/', loginRoutes);
-app.use('/api/facturas', FacturaRoutes);
-app.use('/facturabreve', FacturaBreveRoutes);
-app.use('/resumen', ResumenFacturaRoutes);
-app.use('/prueba', PrimasSD);
-app.use('/prueba2', ComisionesSD);
+app.use('/api', loginRoutes);
+app.use('/api/api/facturas', FacturaRoutes);
+app.use('/api/facturabreve', FacturaBreveRoutes);
+app.use('/api/resumen', ResumenFacturaRoutes);
+app.use('/api/prueba', PrimasSD);
+app.use('/api/prueba2', ComisionesSD);
 
-app.use('/graficos', Graficos);
-app.use('/graficosdol', Graficosdol);
-app.use('/graficosoficinas', GraficoOficinas);
-app.use('/graficosoficinasdolares', GraficoOficinasDolares);
-app.use('/graficosramosbs', GraficoRamoSBS);
-app.use('/graficosramosbsdolares', GraficoRamoSBSDolares);
+app.use('/api/graficos', Graficos);
+app.use('/api/graficosdol', Graficosdol);
+app.use('/api/graficosoficinas', GraficoOficinas);
+app.use('/api/graficosoficinasdolares', GraficoOficinasDolares);
+app.use('/api/graficosramosbs', GraficoRamoSBS);
+app.use('/api/graficosramosbsdolares', GraficoRamoSBSDolares);
 
 
 // Iniciar servidor

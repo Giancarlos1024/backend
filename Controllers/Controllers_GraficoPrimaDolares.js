@@ -27,7 +27,7 @@ const getGraficoPrimaDolares = (req, res) => {
     
     query += `
         GROUP BY 
-            año, mes
+            YEAR(fecha), MONTH(fecha)
         ORDER BY 
             año, mes;
     `;
