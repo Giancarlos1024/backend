@@ -162,3 +162,15 @@ CREATE TABLE factura_resumen (
     dolares DECIMAL(10, 2) NULL,
     soles DECIMAL(10, 2) NULL
 );
+
+CREATE TABLE comision_temporal (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    n_factura VARCHAR (50) NOT NULL,
+    fecha DATE NOT NULL,
+    ramo_asegurador VARCHAR(200) NOT NULL,
+    ramo_sbs VARCHAR(200) NOT NULL,
+    moneda VARCHAR(20) NOT NULL,
+    monto_prima DECIMAL(10, 2) NOT NULL,
+    monto_comision DECIMAL(10, 2) NOT NULL,
+    nombre_usuario VARCHAR(20) NOT NULL
+);

@@ -27,6 +27,7 @@ const FacturaBreveRoutes = require('./Routes/RouterFacturaBreve');
 const ResumenFacturaRoutes = require('./Routes/RouterReporteFactura');
 const PrimasSD = require('./Routes/RouterPrimasSD');
 const ComisionesSD = require('./Routes/RouterComisionesSD');
+const ComisionesTemporales = require('./Routes/RouterComisionesTemporales');
 
 
 const Graficos = require('./Routes/RouterGraficoPrimaSoles');
@@ -43,6 +44,7 @@ app.use('/api/facturabreve', FacturaBreveRoutes);
 app.use('/api/resumen', ResumenFacturaRoutes);
 app.use('/api/prueba', PrimasSD);
 app.use('/api/prueba2', ComisionesSD);
+app.use('/api/temporales', ComisionesTemporales)
 
 app.use('/api/graficos', Graficos);
 app.use('/api/graficosdol', Graficosdol);
