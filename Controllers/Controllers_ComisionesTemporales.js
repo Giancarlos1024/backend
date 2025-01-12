@@ -14,12 +14,12 @@ const getComisionTemporalDatos = (req, res) => {
 
 // Insertar nuevo registro
 const saveComisionTemporal = (req, res) => {
-    const {n_factura, fecha, ramo_asegurador, ramo_sbs, moneda, monto_prima, monto_comision, nombre_usuario} = req.body;
+    const {poliza, n_factura, fecha, ramo_asegurador, ramo_sbs, moneda, monto_prima, monto_comision, nombre_usuario} = req.body;
     const query = `
-        INSERT INTO comision_temporal (n_factura, fecha, ramo_asegurador, ramo_sbs, moneda, monto_prima, monto_comision, nombre_usuario)
-        VALUES (?,?,?,?,?,?,?,?)`;
+        INSERT INTO comision_temporal (poliza, n_factura, fecha, ramo_asegurador, ramo_sbs, moneda, monto_prima, monto_comision, nombre_usuario)
+        VALUES (?,?,?,?,?,?,?,?,?)`;
 
-    const values = [n_factura, fecha, ramo_asegurador, ramo_sbs, moneda, monto_prima, monto_comision, nombre_usuario];
+    const values = [poliza, n_factura, fecha, ramo_asegurador, ramo_sbs, moneda, monto_prima, monto_comision, nombre_usuario];
     
     pool.query(query, values, (err, results)=>{
         if(err) {
